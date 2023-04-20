@@ -1,8 +1,13 @@
 
 export default function capitalize(value) {
-  let arr = value.split('');
-  let firstArr = arr[0].toUpperCase();
-  let realValue = arr.splice(0, 1, firstArr);
-  return arr.join('');
+
+  if (typeof value === 'string') {
+    let arr = value.split('');
+    let firstArr = arr[0].toUpperCase();
+    arr.splice(0, 1, firstArr);
+    return arr.join('');
+  } else {
+    return 'Not a string';
+  }
+  
 } 
-// capitalize('value');
