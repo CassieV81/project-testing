@@ -27,3 +27,8 @@ test('handles shifts greater than 26 correctly', () => {
 test('handles shifts less than -26 correctly', () => {
   expect(ceaserCipher('hello', -30)).toBe('dahhk');
 });
+
+test('handles multiple sentences correctly', () => {
+  expect(ceaserCipher('The quick brown fox jumps over the lazy dog.', 3)).toBe('Wkh txlfn eurzq ira mxpsv ryhu wkh odcb grj.');
+});
+
