@@ -12,6 +12,10 @@ test('"ALLCAP" should be "ALLCAP"', () => {
   expect(capitalize('ALLCAP')).toBe('ALLCAP');
 });
 
+test('"a sentence" should be "A sentence"', () => {
+  expect(capitalize('a sentence')).toBe('A sentence');
+});
+
 test('"1234" should be "1234"', () => {
   expect(capitalize('1234')).toBe('1234');
 });
