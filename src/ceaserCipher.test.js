@@ -9,14 +9,14 @@ test('applies a shift of -1 to the string "bcd" to get "abc"', () => {
 });
 
 test('wraps from z to a correctly', () => {
-  expect(ceasarCipher('xyz', 3)).toBe('abc');
+  expect(ceaserCipher('xyz', 3)).toBe('abc');
 });
 
 test('applies a shift of 10 to the string "hello" to get "rovvy"', () => {
   expect(ceaserCipher('hello', 10)).toBe('rovvy');
 });
 
-test('handles non-alphabetic characters correctly', () => {
+test('handles non-alphabetic characters correctly and preserves case', () => {
   expect(ceaserCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
 });
 
@@ -25,5 +25,5 @@ test('handles shifts greater than 26 correctly', () => {
 });
 
 test('handles shifts less than -26 correctly', () => {
-  expect(ceaserCipher('hello', -30)).toBe('xubbe');
+  expect(ceaserCipher('hello', -30)).toBe('dahhk');
 });
