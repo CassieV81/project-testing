@@ -32,3 +32,11 @@ test('handles multiple sentences correctly', () => {
   expect(ceaserCipher('The quick brown fox jumps over the lazy dog.', 3)).toBe('Wkh txlfn eurzq ira mxpsv ryhu wkh odcb grj.');
 });
 
+test('handles non string attribute as Not  valid', () => {
+  expect(ceaserCipher(12345, 7)).toBe('Not a valid attribute');
+});
+
+test('handles non-nunber shift atrribute as Not valid', () => {
+  expect(ceaserCipher('string', '5')).toBe('Not a valid attribute');
+})
+
