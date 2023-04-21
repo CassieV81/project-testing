@@ -36,9 +36,10 @@ test('returns correct object for array [0]', () => {
   });
 });
 
-test('returns null for invalid input', () => {
-  expect(analyzeArray('not an array')).toBeNull();
-  expect(analyzeArray([1, 2, 'not a number'])).toBeNull();
-  expect(analyzeArray([NaN, 2, 3])).toBeNull();
-  expect(analyzeArray([Infinity, -Infinity, 5])).toBeNull();
+test('throws error for invalid input', () => {
+  expect(() => analyzeArray('not an array')).toThrow('Input is not an array');
+  expect(() => analyzeArray([1, 2, 'not a number'])).toThrow('Array contains non-number elements');
+  expect(() => analyzeArray([NaN, 2, 3])).toThrow('Array contains non-number elements');
 });
+
+
